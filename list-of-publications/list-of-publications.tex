@@ -1,0 +1,84 @@
+% This LaTeX source code creates a document listing academic publications for a researcher.
+% The document is formatted as an article and provides a clear and concise layout.
+
+% Load necessary packages
+\documentclass[a4paper,12pt]{article} % Set document class, paper size, and font size.
+\usepackage[T1]{fontenc} % Set font encoding.
+\usepackage[utf8]{inputenc} % Set input encoding.
+\usepackage{graphicx} % Package for handling images.
+\usepackage[hidelinks]{hyperref} % Package for hyperlinks with hidden link borders.
+\usepackage[margin=1in]{geometry} % Package for setting page margins.
+\usepackage{fancyhdr} % Package for customizing headers and footers.
+\usepackage{lastpage} % Package for getting the number of the last page.
+\usepackage{enumitem} % Package for customizing lists.
+\usepackage{xcolor} % Package for handling colors.
+\usepackage{sectsty} % Package for customizing section titles.
+\usepackage{titlesec} % Package for customizing section spacing.
+\usepackage[sorting=ydnt,backend=biber]{biblatex} % Package for managing bibliography.
+
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\addbibresource{../resources/bibliography.bib} % Add the bibliography file.
+
+\titleformat{\section}{\vspace{1em}\bfseries\scshape\Large}{}{0em}{}
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{List of Publications}
+\fancyfoot[RO]{\thepage/\pageref{LastPage}}
+\fancyfoot[LO]{Last updated: \today}
+\renewcommand{\footrulewidth}{1pt}
+\setlength{\footskip}{20pt}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[c]{0.6\textwidth}
+    {\LARGE \bfseries John Doe}\\
+    Address\\
+    Email: \href{mailto:john.doe@example.com}{john.doe@example.com}\\
+    Phone: +1 (555)
+\end{minipage}
+
+\section*{Profile Links}
+\hrule\medskip
+
+\noindent \textbf{Google Scholar Profile}
+\par \smallskip
+\noindent \texttt{\url{https://scholar.google.com/citations?user=5hyZ0wsAAAAJhl\&user=5hyZ0wsAAAAJ}}
+\par \bigskip
+\noindent \textbf{ResearchGate Profile}
+\par \smallskip
+\noindent \texttt{\url{https://www.researchgate.net/profile/Bekir-Bakar}}
+
+\section*{Publications}
+\hrule\medskip
+
+\subsection*{Master's Thesis}
+\begin{refsection}
+    \nocite{bakar2018mastertshesis}
+    \printbibliography[type=thesis,heading=none]
+\end{refsection}
+
+\subsection*{Journal Articles}
+\begin{refsection}
+    \nocite{yayik2022deep}
+    \printbibliography[type=article,heading=none]
+\end{refsection}
+
+\subsection*{Conference Proceedings}
+\begin{refsection}
+    \nocite{bakar2020turkish, bakar2018experimental, bakar2018replay}
+    \printbibliography[type=inproceedings,heading=none]
+\end{refsection}
+
+\end{document}
