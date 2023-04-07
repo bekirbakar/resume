@@ -1,0 +1,34 @@
+# Ignore Microsoft Word Files
+*.doc
+*.docx
+~$*
+
+# Ignore LaTeX Build Files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Ignore Backup and Temporary Files
+*~
+*.bak
+*.swp
+.DS_Store
+
+# Ignore Compiled Binaries and Executables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore Configuration Files and Sensitive Data
+*.config
+*.key
+*.pem
+*.env
+
+# Ignore Personal Files
+personal
