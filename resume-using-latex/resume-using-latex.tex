@@ -1,0 +1,97 @@
+% This LaTeX source code creates a resume template with a clean and professional layout.
+% The document is formatted as an article and uses a 12pt Times New Roman font.
+
+\documentclass[a4paper,12pt]{article} % Set document class, paper size, and font size.
+\usepackage[T1]{fontenc} % Set font encoding.
+\usepackage[utf8]{inputenc} % Set input encoding.
+\usepackage{graphicx} % Package for handling images.
+\usepackage[hidelinks]{hyperref} % Package for hyperlinks with hidden link borders.
+\usepackage[margin=1in]{geometry} % Package for setting page margins.
+\usepackage{fancyhdr} % Package for customizing headers and footers.
+\usepackage{lastpage} % Package for getting the number of the last page.
+\usepackage{enumitem} % Package for customizing lists.
+\usepackage{xcolor} % Package for handling colors.
+\usepackage{sectsty} % Package for customizing section titles.
+\usepackage{titlesec} % Package for customizing section spacing.
+\usepackage{times} % Package for using Times New Roman font.
+
+\titleformat{\section}{\vspace{1em}\bfseries\scshape\Large}{}{0em}{}
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{Resume}
+\fancyfoot[RO]{\thepage/\pageref{LastPage}}
+\fancyfoot[LO]{Last updated: \today}
+\renewcommand{\footrulewidth}{1pt}
+\setlength{\footskip}{20pt}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[c]{0.6\textwidth}
+    {\LARGE \bfseries John Doe}\\
+    Address\\
+    Email: \href{mailto:john.doe@example.com}{john.doe@example.com}\\
+    Phone: +1 (555)\\
+    \bigskip\\
+    linkedin.com/in/john-doe\\
+    github.com/johndoe
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.3\textwidth}
+    \includegraphics[width=0.95\textwidth]{../resources/photo.jpg}
+\end{minipage}
+
+\section*{Skills}
+\begin{itemize}[leftmargin=*]
+    \item Programming: Java, C++, Python, JavaScript, HTML/CSS
+    \item Frameworks: React, Angular, Django
+    \item Tools: Git, Docker, Jenkins, JIRA
+    \item Electronics: PCB Design, Circuit Analysis, Microcontrollers, FPGA, VHDL/Verilog
+\end{itemize}
+
+\section*{Employment History}
+\begin{itemize}[leftmargin=*]
+    \item Software Engineer, ABC Tech, New York, NY, USA \hfill January 2023-Present
+          \begin{itemize}
+              \item Developed and maintained web applications using React, Node.js, and PostgreSQL.
+              \item Collaborated with cross-functional teams to ensure high-quality code and timely delivery of features.
+              \item Implemented unit tests and integration tests using Jest and Selenium.
+          \end{itemize}
+    \item Embedded Software Intern, XYZ Corp, San Francisco, CA, USA \hfill June 2022-August 2022
+          \begin{itemize}
+              \item Assisted in the development of firmware for microcontroller-based systems using C and C++.
+              \item Debugged and tested embedded software using oscilloscopes, logic analyzers, and other lab equipment.
+              \item Participated in code reviews and contributed to improving code quality and maintainability.
+          \end{itemize}
+\end{itemize}
+
+\section*{Education}
+\begin{itemize}[leftmargin=*]
+    \item B.Sc. in Electronics Engineering, University Name, City, Country \hfill 2018-2022
+          \begin{itemize}
+              \item GPA: 3.8/4.0
+              \item Relevant Courses: Data Structures and Algorithms, Operating Systems, Digital Signal Processing, Control Systems, Microelectronics, Communications Systems
+              \item Senior Project: Designed and built an IoT-based home automation system using Raspberry Pi, Arduino, and various sensors.
+          \end{itemize}
+\end{itemize}
+
+\section*{Projects}
+\begin{itemize}[leftmargin=*]
+    \item Web-Based Inventory Management System \hfill January 2022 - April 2022
+          \begin{itemize}
+              \item Developed a web application for managing inventory, orders, and customer information.
+              \item Implemented frontend using React and backend using Django.
+              \item Integrated the system with a barcode scanner for easy inventory updates.
+          \end{itemize}
+    \item FPGA-based Image Processing System \hfill September 2021 - December 2021
+          \begin{itemize}
+              \item Designed and implemented an FPGA-based image processing system for real-time object detection.
+              \item Programmed the FPGA using VHDL and developed a custom image processing algorithm.
+              \item Optimized the system for low power consumption and high processing speed.
+          \end{itemize}
+\end{itemize}
+
+\end{document}
