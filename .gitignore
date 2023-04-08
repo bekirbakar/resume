@@ -31,4 +31,5 @@
 *.env
 
 # Ignore Personal Files
-personal
+**/personal/
+
