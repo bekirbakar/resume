@@ -1,7 +1,7 @@
 % This LaTeX source code creates a document listing academic publications for a researcher.
 % The document is formatted as an article and provides a clear and concise layout.
 
-% Load necessary packages
+% Load necessary packages.
 \documentclass[a4paper,12pt]{article} % Set document class, paper size, and font size.
 \usepackage[T1]{fontenc} % Set font encoding.
 \usepackage[utf8]{inputenc} % Set input encoding.
@@ -15,6 +15,7 @@
 \usepackage{sectsty} % Package for customizing section titles.
 \usepackage{titlesec} % Package for customizing section spacing.
 \usepackage[sorting=ydnt,backend=biber]{biblatex} % Package for managing bibliography.
+\usepackage{times} % Package for using Times New Roman font.
 
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
@@ -34,7 +35,7 @@
 \renewcommand{\headrulewidth}{1pt}
 \fancyhead[C]{List of Publications}
 \fancyfoot[RO]{\thepage/\pageref{LastPage}}
-\fancyfoot[LO]{Last updated: \today}
+\fancyfoot[LO]{Updated: \today}
 \renewcommand{\footrulewidth}{1pt}
 \setlength{\footskip}{20pt}
 
@@ -48,16 +49,10 @@
     Phone: +1 (555)
 \end{minipage}
 
-\section*{Profile Links}
+\section*{Profiles}
 \hrule\medskip
 
-\noindent \textbf{Google Scholar Profile}
-\par \smallskip
-\noindent \texttt{\url{https://scholar.google.com/citations?user=5hyZ0wsAAAAJhl\&user=5hyZ0wsAAAAJ}}
-\par \bigskip
-\noindent \textbf{ResearchGate Profile}
-\par \smallskip
-\noindent \texttt{\url{https://www.researchgate.net/profile/Bekir-Bakar}}
+Click to see more information on \href{https://scholar.google.com/citations?user=5hyZ0wsAAAAJhl\&user=5hyZ0wsAAAAJ}{Google Scholar} and  \href{https://www.researchgate.net/profile/Bekir-Bakar}{ResearchGate} profiles.
 
 \section*{Publications}
 \hrule\medskip
