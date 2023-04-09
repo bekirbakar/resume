@@ -15,15 +15,9 @@
 \usepackage{sectsty} % Package for customizing section titles.
 \usepackage{titlesec} % Package for customizing section spacing.
 \usepackage[sorting=ydnt,backend=biber]{biblatex} % Package for managing bibliography.
+\BiblatexSplitbibDefernumbersWarningOff
 \usepackage{times} % Package for using Times New Roman font.
-
-\usepackage[hidelinks]{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=blue,
-}
+\usepackage{url} % Package for breaking long URLs.
 
 \addbibresource{../resources/bibliography.bib} % Add the bibliography file.
 
@@ -32,31 +26,24 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\headrulewidth}{1pt}
-\fancyhead[C]{List of Publications}
-\fancyfoot[RO]{\thepage/\pageref{LastPage}}
-\fancyfoot[LO]{Updated: \today}
-\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{Updated: \today}
 \setlength{\footskip}{20pt}
 
 \begin{document}
 
-\noindent
-\begin{minipage}[c]{0.6\textwidth}
-    {\LARGE \bfseries John Doe}\\
-    Address\\
-    Email: \href{mailto:john.doe@example.com}{john.doe@example.com}\\
-    Phone: +1 (555)
-\end{minipage}
+\noindent {\LARGE \textbf{John Doe}}
+
+\vspace{12pt}
+
+\noindent \textbf{Address:} Your Address Here\
+\noindent \textbf{Phone:} +1 (555) 123-4567\
+\noindent \textbf{Email:} \href{mailto:john.doe@example.com}{john.doe@example.com}
 
 \section*{Profiles}
-\hrule\medskip
-
-Click to see more information on \href{https://scholar.google.com/citations?user=5hyZ0wsAAAAJhl\&user=5hyZ0wsAAAAJ}{Google Scholar} and  \href{https://www.researchgate.net/profile/Bekir-Bakar}{ResearchGate} profiles.
+Click to see more information on \href{https://scholar.google.com/citations?user=5hyZ0wsAAAAJhl\&user=5hyZ0wsAAAAJ}{Google Scholar} and \href{https://www.researchgate.net/profile/Bekir-Bakar}{ResearchGate} profiles.
 
 \section*{Publications}
-\hrule\medskip
-
 \subsection*{Master's Thesis}
 \begin{refsection}
     \nocite{bakar2018mastertshesis}
