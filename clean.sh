@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# File extensions to remove
+# Deletes intermediate and cache files from the current directory.
+
+# File extensions to remove.
 EXTENSIONS=(
     "*.aux"
     "*.bbl"
