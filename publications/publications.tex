@@ -1,0 +1,76 @@
+% This LaTeX source code creates a document listing academic publications for a researcher.
+% The document is formatted as an article and provides a clear and concise layout.
+
+% Load necessary packages.
+\documentclass[a4paper,12pt]{article} % Set document class, paper size, and font size.
+\usepackage[T1]{fontenc} % Set font encoding.
+\usepackage[utf8]{inputenc} % Set input encoding.
+\usepackage{graphicx} % Package for handling images.
+\usepackage[hidelinks]{hyperref} % Package for hyperlinks with hidden link borders.
+\usepackage[margin=1in]{geometry} % Package for setting page margins.
+\usepackage{fancyhdr} % Package for customizing headers and footers.
+\usepackage{lastpage} % Package for getting the number of the last page.
+\usepackage{enumitem} % Package for customizing lists.
+\usepackage{xcolor} % Package for handling colors.
+\usepackage{sectsty} % Package for customizing section titles.
+\usepackage{titlesec} % Package for customizing section spacing.
+\usepackage[sorting=ydnt,backend=biber,maxbibnames=99]{biblatex} % Package for managing bibliography.
+\BiblatexSplitbibDefernumbersWarningOff
+\usepackage{times} % Package for using Times New Roman font.
+\usepackage{url} % Package for breaking long URLs.
+\usepackage{tikz} % Package for drawing figures.
+
+\addbibresource{../resources/bibliography.bib} % Add the bibliography file.
+
+\titleformat{\section}{\vspace{1em}\bfseries\scshape\Large}{}{0em}{}
+\titlespacing*{\section}{0pt}{1em}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+% \lfoot{Page: \thepage/\pageref{LastPage}}
+% \rfoot{Updated: \today}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+\definecolor{sectioncolor}{RGB}{0, 0, 0}
+
+\titleformat{\section}{\color{sectioncolor}\Large\bfseries}{\thesection}{1em}{}[\vspace{-12pt}\color{sectioncolor}\rule{\linewidth}{0.1pt}\vspace{-6pt}]
+
+\begin{document}
+\begin{sloppy}
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[line width=1pt,rounded corners=10pt] ([xshift=1cm,yshift=-1cm]current page.north west) rectangle ([xshift=-1cm,yshift=1cm]current page.south east);
+    \end{tikzpicture}
+
+    \noindent {\LARGE \textbf{John Doe}}
+
+    \vspace{12pt}
+
+    \noindent \textbf{Phone:} +1 (555) 123-4567\\
+    \noindent \textbf{Email:} \href{mailto:johndoe@example.com}{johndoe@example.com}
+
+    \section*{Profiles}
+    Visit my \href{https://scholar.google.com/citations?user=5hyZ0wsAAAAJhl\&user=5hyZ0wsAAAAJ}{Google Scholar} and \href{https://www.researchgate.net/profile/Bekir-Bakar}{ResearchGate} profiles for more information.
+
+    \section*{Publications}
+    \subsection*{Master's Thesis}
+    \begin{refsection}
+        \nocite{bakar2018mastertshesis}
+        \printbibliography[type=thesis,heading=none]
+    \end{refsection}
+
+    \subsection*{Journal Articles}
+    \begin{refsection}
+        \nocite{yayik2022deep}
+        \printbibliography[type=article,heading=none]
+    \end{refsection}
+
+    \subsection*{Conference Proceedings}
+    \begin{refsection}
+        \nocite{bakar2020turkish, bakar2018experimental, bakar2018replay}
+        \printbibliography[type=inproceedings,heading=none]
+    \end{refsection}
+\end{sloppy}
+\end{document}
