@@ -1,11 +1,11 @@
 # Editor Specific Files
 .vscode/
 
-# Ignore Backup and Temporary Files
+# Backup and Temporary Files
 *~
 *.bak
 *.swp
 .DS_Store
 
-# Ignore Personal Files
+# Personal Files
 personal
