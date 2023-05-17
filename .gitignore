@@ -7,5 +7,6 @@
 *.swp
 .DS_Store
 
-# Personal Files
+# Hidden Files
+.trash
 personal
