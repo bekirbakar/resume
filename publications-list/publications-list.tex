@@ -12,7 +12,6 @@
 \usepackage{lastpage} % Package for getting the number of the last page.
 \usepackage{enumitem} % Package for customizing lists.
 \usepackage{xcolor} % Package for handling colors.
-\usepackage{sectsty} % Package for customizing section titles.
 \usepackage{titlesec} % Package for customizing section spacing.
 \usepackage[sorting=ydnt,backend=biber,maxbibnames=99]{biblatex} % Package for managing bibliography.
 \BiblatexSplitbibDefernumbersWarningOff
@@ -27,8 +26,6 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-% \lfoot{Page: \thepage/\pageref{LastPage}}
-% \rfoot{Updated: \today}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -57,7 +54,7 @@
     \section*{Publications}
     \subsection*{Master's Thesis}
     \begin{refsection}
-        \nocite{bakar2018mastertshesis}
+        \nocite{bakar2018mastersthesis}
         \printbibliography[type=thesis,heading=none]
     \end{refsection}
 
