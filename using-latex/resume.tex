@@ -1,0 +1,81 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage[top=0.50in, bottom=0.25in, left=0.75in, right=0.75in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tikz} 
+\usepackage{lmodern}
+
+\pagestyle{empty}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+\definecolor{sectioncolor}{RGB}{0, 100, 200}
+
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+
+\titleformat{\section}
+{\color{sectioncolor}\Large\bfseries}
+{}
+{-4em}
+{}
+[\vspace{-0.8em}\color{sectioncolor}\rule{\linewidth}{0.1pt}]
+
+\begin{document}
+
+\noindent {\Large \textbf{Name Surname}}
+
+\vspace{2pt}
+
+\noindent Software Developer
+
+\vspace{4pt}
+
+\noindent Phone Number
+
+\noindent \href{mailto:mail@mail.com}{mail@mail.com} \hfill \href{https://github.com/username}{github.com/username}
+
+\noindent Country \hfill \href{https://linkedin.com/in/username}{linkedin.com/in/username}
+
+\vspace{8pt}
+
+\section*{Overview}
+
+\begin{itemize}[leftmargin=*]
+    \setlength\itemsep{-0.8pt}
+    \item Spoken Languages: English
+    \item Programming Languages: \textbf{\textit{C}}, Python
+    \item Libraries \& Frameworks: \textbf{\textit{Unix Tools}}; \textbf{Transformers}, Keras, PyTorch
+    \item[\textbullet] Other: \textbf{\textit{Linux}}; \textbf{\textit{Docker}}, CI/CD
+\end{itemize}
+
+\vspace{-12pt}
+
+\section*{Employment History}
+
+\begin{itemize}[leftmargin=*]
+    \item \small \textbf{Data Scientist \hfill Company | Country | 01.2020–01.2025}\\
+    \hspace*{0.8em} ...
+\end{itemize}
+
+\vspace{-12pt}
+
+\section*{Education}
+
+\begin{itemize}[leftmargin=*]
+    \item \small \textbf{(B.Sc.) Electronics Engineering \hfill University | Country | 2010-2015}\\
+        \vspace{-16pt}
+        \begin{itemize}
+            \setlength\itemsep{-2pt}
+            \item[\textbullet] \textbf{Activities}: ...
+        \end{itemize}
+\end{itemize}
+
+\vfill
+\noindent \textbf{Note}: ...
+
+\end{document}
